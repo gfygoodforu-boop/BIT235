@@ -1,0 +1,23 @@
+<!--
+  Name:       HuHao
+  Student ID: 1580820
+  Unit:       BIT235 Object Oriented Programming - Assessment 2 Part A
+  File:       login-error.html  (View: error page for a failed login)
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wiki - Login Error</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <main class="card center">
+        <h1 class="error-title">Login failed</h1>
+        <p>Invalid username or password. Please check your details and try again.</p>
+        <!-- Link back to the login form (GET /login) -->
+        <a class="button" th:href="@{/login}">Back to login</a>
+    </main>
+</body>
+</html>

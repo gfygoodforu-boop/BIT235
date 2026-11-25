@@ -1,0 +1,82 @@
+/*
+ * Name:       HuHao
+ * Student ID: 1580820
+ * Unit:       BIT235 Object Oriented Programming - Assessment 2 Part A
+ * File:       style.css  (styles shared by all pages)
+ */
+
+/* Page background: centre the card in the middle of the browser window */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #0f766e, #1e3a8a);
+}
+
+/* White box that holds the form or the message */
+.card {
+    width: 100%;
+    max-width: 380px;
+    box-sizing: border-box;
+    padding: 32px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+
+.center { text-align: center; }
+
+h1 { margin: 0 0 6px; color: #1f2937; }
+
+.subtitle { margin: 0 0 22px; color: #6b7280; }
+
+/* Form layout */
+label {
+    display: block;
+    margin: 14px 0 6px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #374151;
+}
+
+input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+input:focus {
+    outline: none;
+    border-color: #0f766e;
+    box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.2);
+}
+
+/* Login button and the link styled as a button */
+button, .button {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 11px 24px;
+    border: none;
+    border-radius: 8px;
+    background: #0f766e;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+form button { width: 100%; }
+
+button:hover, .button:hover { background: #115e59; }
+
+/* Red heading on the error page */
+.error-title { color: #b91c1c; }
+
+p { color: #4b5563; line-height: 1.5; }

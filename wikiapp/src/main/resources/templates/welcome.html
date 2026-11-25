@@ -1,0 +1,23 @@
+<!--
+  Name:       HuHao
+  Student ID: 1580820
+  Unit:       BIT235 Object Oriented Programming - Assessment 2 Part A
+  File:       welcome.html  (View: welcome message after a successful login)
+-->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wiki - Welcome</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <main class="card center">
+        <h1>Welcome, <span th:text="${username}">user</span>!</h1>
+        <!-- th:text replaces the placeholder text with the "username" set in HomeController -->
+        <p>You have successfully logged in to the Wiki.</p>
+        <a class="button" th:href="@{/logout}">Logout</a>
+    </main>
+</body>
+</html>

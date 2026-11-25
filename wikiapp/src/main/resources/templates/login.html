@@ -1,0 +1,40 @@
+<!--
+  Name:       HaoHu
+  Student ID: 1580820
+  Unit:       BIT235 Object Oriented Programming - Assessment 2 Part A
+  File:       login.html  (View: login screen)
+-->
+<!DOCTYPE html>
+<!-- xmlns:th enables the Thymeleaf attributes (th:action, th:object, th:field ...) -->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wiki - Login</title>
+    <!-- @{...} builds a URL relative to the application root -->
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+    <main class="card">
+        <h1>Wiki</h1>
+        <p class="subtitle">Administrator login</p>
+
+        <!-- th:action = where the form is sent; th:object = the User object from the Model.
+             method="post" matches the @PostMapping("/login") in LoginController. -->
+        <form th:action="@{/login}" th:object="${user}" method="post">
+
+            <label for="username">Username</label>
+            <!-- th:field="*{username}" binds this input to User.username
+                 (it generates the id and name attributes as well) -->
+            <input type="text" th:field="*{username}" placeholder="Enter your username"
+                   autocomplete="username" required>
+
+            <label for="password">Password</label>
+            <input type="password" th:field="*{password}" placeholder="Enter your password"
+                   autocomplete="current-password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </main>
+</body>
+</html>
